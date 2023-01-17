@@ -46,9 +46,14 @@ const menu = [
 ];
 
 function renderMenu() {
-  const $main = document.createElement("main");
-  const $p1 = createHtmlElement("p", null, null, "Bienvenidos");
-  const $h1 = createHtmlElement("h1", null, null, "Menu");
+  const $main = createHtmlElement("main", null, ["menu"], null);
+  const $p1 = createHtmlElement(
+    "p",
+    null,
+    ["golden", "cursive"],
+    "Bienvenidos"
+  );
+  const $h1 = createHtmlElement("h1", null, ["gray"], "Menu");
   const $hr = document.createElement("hr");
 
   $main.appendChild($p1);
@@ -57,9 +62,14 @@ function renderMenu() {
 
   menu.forEach((item) => {
     const $div = createHtmlElement("div", null, ["menu-item"], null);
-    const $title = createHtmlElement("h2", null, null, item.title);
-    const $description = createHtmlElement("p", null, null, item.description);
-    const $price = createHtmlElement("h2", null, null, item.price);
+    const $title = createHtmlElement("h2", null, ["golden"], item.title);
+    const $description = createHtmlElement(
+      "p",
+      null,
+      ["gray"],
+      item.description
+    );
+    const $price = createHtmlElement("h2", null, ["golden"], item.price);
     const $hr = createHtmlElement("hr", null, null, null);
 
     $div.appendChild($title);

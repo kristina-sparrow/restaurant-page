@@ -11,27 +11,32 @@ const hours = [
 ];
 
 function renderContact() {
-  const $main = document.createElement("main");
-  const $p1 = createHtmlElement("p", null, null, "Bienvenidos");
-  const $h1 = createHtmlElement("h1", null, null, "Contact");
+  const $main = createHtmlElement("main", null, ["contact"], null);
+  const $p1 = createHtmlElement(
+    "p",
+    null,
+    ["golden", "cursive"],
+    "Bienvenidos"
+  );
+  const $h1 = createHtmlElement("h1", null, ["gray"], "Contact");
   const $hr = document.createElement("hr");
   const $p2 = createHtmlElement(
     "p",
     null,
-    null,
+    ["gray"],
     "La Familia Panaderia is a neighborhood Mexican bakery that has been serving the community with fresh, authentic, and delicious baked goods for over 20 years. Our bakery is family-owned and operated, and we take pride in using only the freshest and highest quality ingredients in all of our recipes. From our traditional pan de elote to our savory empanadas de carne, we have something for everyone. Our customers are like family to us and we strive to make each visit a pleasant and satisfying experience. Come by and visit us today and taste the difference at La Familia Panaderia!"
   );
-  const $h2 = createHtmlElement("h2", null, null, "Hours");
-  const $ul = createHtmlElement("h2", null, null, null);
+  const $h2 = createHtmlElement("h2", null, ["golden"], "Hours");
+  const $ul = createHtmlElement("ul", null, ["hours"], null);
   hours.forEach((item) =>
-    $ul.appendChild(createHtmlElement("li", null, null, item))
+    $ul.appendChild(createHtmlElement("li", null, ["gray"], item))
   );
-  const $h3 = createHtmlElement("h2", null, null, "Contact");
-  const $p3 = createHtmlElement("p", null, null, "P: 123-456-7890");
+  const $h3 = createHtmlElement("h2", null, ["golden"], "Contact");
+  const $p3 = createHtmlElement("p", null, ["gray"], "P: 123-456-7890");
   const $p4 = createHtmlElement(
     "p",
     null,
-    null,
+    ["gray"],
     "E: panaderia@notarealemail.com"
   );
 

@@ -1,3 +1,4 @@
+import "./styles.css";
 import { renderNav } from "./nav";
 import { renderHome } from "./home";
 import { renderFooter } from "./footer";
@@ -38,9 +39,9 @@ home();
 
 document.addEventListener("click", (e) => {
   const target = e.target.innerText;
-  if (target === "Home") home();
-  if (target === "Menu" || target === "View the Menu") menu();
-  if (target === "Contact") contact();
+  if (target === "HOME") home();
+  if (target === "MENU" || target === "VIEW THE MENU") menu();
+  if (target === "CONTACT") contact();
 });
 
 export { $content, createHtmlElement };

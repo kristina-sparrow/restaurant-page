@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --backgroundColor: #f2f2f2;
+  --secondaryColor: #c59d5f;
+  --mainTextColor: white;
+  --secondaryTextColor: #262626;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  background: url("img/restaurant-front.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu,
+.contact {
+  background: var(--backgroundColor);
+  height: 100%;
+  max-height: calc(100% - 188px);
+  overflow: scroll;
+}
+
+nav {
+  display: flex;
+  height: 94px;
+  border-bottom: 2px solid var(--secondaryColor);
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 20px;
+  color: var(--mainTextColor);
+  text-transform: uppercase;
+}
+
+nav li:hover {
+  border-bottom: 2px solid var(--secondaryColor);
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+.hours {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+.menu-item {
+  max-width: 600px;
+  margin-bottom: 40px;
+  margin-left: calc(50vw - 300px);
+}
+
+footer {
+  height: 94px;
+  border-top: 2px solid var(--secondaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin: auto;
+  color: var(--mainTextColor);
+}
+
+.contact p {
+  max-width: 600px;
+  margin-left: calc(50vw - 300px);
+}
+
+.contact h2 {
+  margin-top: 40px;
+}
+
+.cursive {
+  font-family: "Herr Von Muellerhoff", cursive;
+  font-size: 96px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: bold;
+  margin-top: -64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 8px;
+}
+
+p {
+  line-height: 150%;
+}
+
+hr {
+  width: 280px;
+  border: 2px solid var(--secondaryColor);
+  margin: 24px auto;
+}
+
+.menu-item hr {
+  border: 1px solid var(--secondaryColor);
+}
+
+button {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 16px;
+  background: var(--secondaryColor);
+  border: none;
+  margin: 40px auto;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--mainTextColor);
+}
+
+.white {
+  color: var(--mainTextColor);
+}
+
+.gray {
+  color: var(--secondaryTextColor);
+}
+
+.golden {
+  color: var(--secondaryColor);
+}
+
+.text-center {
+  text-align: center;
+}
+
+main::-webkit-scrollbar {
+  width: 1em;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--secondaryColor);
+  outline: 1px solid var(--backgroundColor);
+}
