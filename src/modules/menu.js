@@ -1,4 +1,4 @@
-import { $content, createHtmlElement } from "./index";
+import { $content, createHtmlElement } from "../index";
 
 const menu = [
   {

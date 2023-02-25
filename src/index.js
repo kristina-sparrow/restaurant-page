@@ -1,9 +1,9 @@
-import "./styles.css";
-import { renderNav } from "./nav";
-import { renderHome } from "./home";
-import { renderFooter } from "./footer";
-import { renderMenu } from "./menu";
-import { renderContact } from "./contact";
+import "./index.scss";
+import { renderNav } from "./modules/nav";
+import { renderHome } from "./modules/home";
+import { renderFooter } from "./modules/footer";
+import { renderMenu } from "./modules/menu";
+import { renderContact } from "./modules/contact";
 
 const $content = document.getElementById("content");
 
