@@ -8,7 +8,7 @@ function renderHome() {
     ["golden", "cursive"],
     "Bienvenidos"
   );
-  const $h1 = createHtmlElement("h1", null, ["white"], "La Familia Panaderia");
+  const $h1 = createHtmlElement("h1", null, ["white"], "La Panaderia");
   const $hr = createHtmlElement("hr", null, null, null);
   const $p2 = createHtmlElement(
     "p",

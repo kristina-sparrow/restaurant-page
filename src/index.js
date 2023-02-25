@@ -16,6 +16,15 @@ function createHtmlElement(type, id, arrayClasses, content) {
   return element;
 }
 
+function createLink(href, content) {
+  const link = document.createElement("a");
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  if (href) link.href = href;
+  if (content) link.innerHTML = content;
+  return link;
+}
+
 function home() {
   $content.innerHTML = "";
   renderNav();
@@ -44,4 +53,4 @@ document.addEventListener("click", (e) => {
   if (target === "CONTACT") contact();
 });
 
-export { $content, createHtmlElement };
+export { $content, createHtmlElement, createLink };

@@ -1,12 +1,11 @@
+/* VARIABLES & FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+$clr-bg: #f2f2f2;
+$clr-primary: #c59d5f;
+$clr-light: #fff;
+$clr-dark: #262626;
 
-:root {
-  --backgroundColor: #f2f2f2;
-  --secondaryColor: #c59d5f;
-  --mainTextColor: white;
-  --secondaryTextColor: #262626;
-}
-
+/* BASE */
 *,
 *::before,
 *::after {
@@ -27,83 +26,50 @@
   justify-content: space-between;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+hr {
+  width: 280px;
+  border: 2px solid $clr-primary;
+  margin: 24px auto;
 }
 
-.menu,
-.contact {
-  background: var(--backgroundColor);
-  height: 100%;
-  max-height: calc(100% - 188px);
-  overflow: scroll;
-}
-
-nav {
-  display: flex;
-  height: 94px;
-  border-bottom: 2px solid var(--secondaryColor);
-}
-
-nav ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-nav li {
-  margin: 0 20px;
-  color: var(--mainTextColor);
+button {
+  font-size: 16px;
   text-transform: uppercase;
-}
-
-nav li:hover {
-  border-bottom: 2px solid var(--secondaryColor);
-  padding-bottom: 4px;
+  padding: 16px;
+  background: $clr-primary;
+  border: none;
+  margin: 40px auto;
   cursor: pointer;
+  &:hover {
+    color: $clr-light;
+    transform: scale(1.1);
+  }
 }
 
-.hours {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 10px;
+main::-webkit-scrollbar {
+  width: 1em;
 }
 
-.menu-item {
-  max-width: 600px;
-  margin-bottom: 40px;
-  margin-left: calc(50vw - 300px);
+main::-webkit-scrollbar-thumb {
+  background-color: $clr-primary;
+  outline: 1px solid $clr-bg;
 }
 
-footer {
-  height: 94px;
-  border-top: 2px solid var(--secondaryColor);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* TYPOGRAPHY */
+.white {
+  color: $clr-light;
 }
 
-footer p {
-  margin: auto;
-  color: var(--mainTextColor);
+.gray {
+  color: $clr-dark;
 }
 
-.contact p {
-  max-width: 600px;
-  margin-left: calc(50vw - 300px);
+.golden {
+  color: $clr-primary;
 }
 
-.contact h2 {
-  margin-top: 40px;
+.text-center {
+  text-align: center;
 }
 
 .cursive {
@@ -129,51 +95,89 @@ p {
   line-height: 150%;
 }
 
-hr {
-  width: 280px;
-  border: 2px solid var(--secondaryColor);
-  margin: 24px auto;
+/* HOME */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-item hr {
-  border: 1px solid var(--secondaryColor);
+/* NAV */
+nav {
+  display: flex;
+  height: 94px;
+  border-bottom: 2px solid $clr-primary;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li {
+      margin: 0 20px;
+      color: $clr-light;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: 2px solid $clr-primary;
+        padding-bottom: 4px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-button {
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 16px;
-  background: var(--secondaryColor);
-  border: none;
-  margin: 40px auto;
-  cursor: pointer;
+/* CONTACT */
+.contact {
+  background: $clr-bg;
+  height: 100%;
+  max-height: calc(100% - 188px);
+  overflow: scroll;
+  .hours {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+  }
+  p {
+    max-width: 600px;
+    margin-left: calc(50vw - 300px);
+  }
+  h2 {
+    margin-top: 40px;
+  }
 }
 
-button:hover {
-  color: var(--mainTextColor);
+/* MENU */
+.menu {
+  background: $clr-bg;
+  height: 100%;
+  max-height: calc(100% - 188px);
+  overflow: scroll;
+  .menu-item {
+    max-width: 600px;
+    margin-bottom: 40px;
+    margin-left: calc(50vw - 300px);
+    hr {
+      border: 1px solid $clr-primary;
+    }
+  }
 }
 
-.white {
-  color: var(--mainTextColor);
-}
-
-.gray {
-  color: var(--secondaryTextColor);
-}
-
-.golden {
-  color: var(--secondaryColor);
-}
-
-.text-center {
-  text-align: center;
-}
-
-main::-webkit-scrollbar {
-  width: 1em;
-}
-
-main::-webkit-scrollbar-thumb {
-  background-color: var(--secondaryColor);
-  outline: 1px solid var(--backgroundColor);
+/* FOOTER */
+footer {
+  height: 94px;
+  border-top: 2px solid $clr-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: $clr-light;
+  svg {
+    color: $clr-light;
+    font-size: 1.1rem;
+  }
 }
