@@ -26,7 +26,7 @@
       "es2021": true
     },
     "extends": [
-      "some-other-config-you-use",
+      "airbnb-base",
       "prettier"
     ],
     "overrides": [],
